@@ -23,13 +23,13 @@ const Navbar = () => {
           <a href="#menu">Menu</a>
         </li>
         <li className="p__opensans">
-          <a href="#contact">Contact</a>
+          <a href="#awards">Awards</a>
         </li>
         <li className="p__opensans">
-          <a href="#awwards">Awwards</a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
-      <div className="app__navbar-login">
+      {/* <div className="app__navbar-login">
         <a href="#login" className="p__opensans">
           Login / Register
         </a>
@@ -37,7 +37,7 @@ const Navbar = () => {
         <a href="#login" className="p__opensans">
           Book Table
         </a>
-      </div>
+      </div> */}
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu
           color="#fff"
