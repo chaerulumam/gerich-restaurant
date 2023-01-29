@@ -4,15 +4,24 @@ import { SubHeading, MenuItem } from "../../components";
 import { data, images } from "../../constants";
 
 import "./SpecialMenu.css";
+import { motion } from "framer-motion";
 
 const SpecialMenu = () => (
   <div className="app__specialMenu flex__center section__padding" id="menu">
-    <div className="app__specialMenu-title">
+    <motion.div
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.8 }}
+      className="app__specialMenu-title"
+    >
       <SubHeading title="Menu that fits your pallete" />
       <h1 className="headtext__cormorant">Today&apos;s Special</h1>
-    </div>
+    </motion.div>
 
-    <div className="app__specialMenu-menu">
+    <motion.div
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.8 }}
+      className="app__specialMenu-menu"
+    >
       <div className="app__specialMenu-menu_wine flex__center">
         <p className="app__specialMenu-menu_heading">Wine & Bear</p>
         <div className="app__specialMenu_menu_items">
@@ -43,12 +52,17 @@ const SpecialMenu = () => (
           ))}
         </div>
       </div>
-    </div>
-    <div style={{ marginTop: 15 }}>
+    </motion.div>
+
+    <motion.div
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.8 }}
+      style={{ marginTop: 15 }}
+    >
       <button type="button" className="custom__button">
         View More
       </button>
-    </div>
+    </motion.div>
   </div>
 );
 

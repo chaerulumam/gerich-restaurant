@@ -4,6 +4,7 @@ import {
   BsArrowLeftShort,
   BsArrowRightShort,
 } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 import { SubHeading } from "../../components";
 import { images } from "../../constants";
@@ -25,19 +26,42 @@ const Gallery = () => {
 
   return (
     <div className="app__gallery flex__center">
-      <div className="app__gallery-content">
+      <motion.div
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+        className="app__gallery-content"
+      >
         <SubHeading title="Instagram" />
-        <h1 className="headtext__cormorant">Photo Gallery</h1>
-        <p className="p__opensans" style={{ color: "#aaa", marginTop: "2rem" }}>
+        <motion.h1
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          className="headtext__cormorant"
+        >
+          Photo Gallery
+        </motion.h1>
+        <motion.p
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          className="p__opensans"
+          style={{ color: "#AAAAAA", marginTop: "2rem" }}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
           mattis ipsum turpis elit elit scelerisque egestas mu.
-        </p>
-        <button type="button" className="custom__button">
+        </motion.p>
+        <motion.button
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          type="button"
+          className="custom__button"
+        >
           View More
-        </button>
-      </div>
-
-      <div className="app__gallery-images">
+        </motion.button>
+      </motion.div>
+      <motion.div
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+        className="app__gallery-images"
+      >
         <div className="app__gallery-images_container" ref={scrollRef}>
           {[
             images.gallery01,
@@ -64,7 +88,7 @@ const Gallery = () => {
             onClick={() => scroll("right")}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

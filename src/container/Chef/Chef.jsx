@@ -2,41 +2,86 @@ import React from "react";
 
 import { SubHeading } from "../../components";
 import { images } from "../../constants";
+import { motion } from "framer-motion";
 
 import "./Chef.css";
 
 const Chef = () => (
   <div className="app__bg app__wrapper section__padding">
-    <div className="app__wrapper_img app__wrapper_img-reverse">
+    <motion.div
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.8 }}
+      className="app__wrapper_img app__wrapper_img-reverse"
+    >
       <img src={images.chef} alt="chef_image" />
-    </div>
+    </motion.div>
 
-    <div className="app__wrapper_info">
+    <motion.div
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.8 }}
+      className="app__wrapper_info"
+    >
       <SubHeading title="Chef's word" />
-      <h1 className="headtext__cormorant">What we belive in</h1>
+      <motion.h1
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.8 }}
+        className="headtext__cormorant"
+      >
+        What we belive in
+      </motion.h1>
 
-      <div className="app__chef-content">
-        <div className="app__chef-content_quote">
+      <motion.div
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.8 }}
+        className="app__chef-content"
+      >
+        <motion.div
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.8 }}
+          className="app__chef-content_quote"
+        >
           <img src={images.quote} alt="quote_image" />
-          <p className="p__opensans">
+          <motion.p
+            whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+            transition={{ duration: 0.8 }}
+            className="p__opensans"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit auctor sit .
-          </p>
-        </div>
-        <p className="p__opensans">
+          </motion.p>
+        </motion.div>
+        <motion.p
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.8 }}
+          className="p__opensans"
+        >
           auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit.
           Nulla scelerisque scelerisque congue ac consequat, aliquam molestie
           lectus eu. Congue iaculis integer curabitur semper sit nunc.{" "}
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
-      <div className="app__chef-sign">
-        <p>Kevin Luo</p>
-        <p className="p__opensans" alt="sign_image">
+      <motion.div
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.8 }}
+        className="app__chef-sign"
+      >
+        <motion.p
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.8 }}
+        >
+          Kevin Luo
+        </motion.p>
+        <motion.p
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.8 }}
+          className="p__opensans"
+          alt="sign_image"
+        >
           Chef & Founder
-        </p>
+        </motion.p>
         <img src={images.sign} alt="sign_image" />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   </div>
 );
 
